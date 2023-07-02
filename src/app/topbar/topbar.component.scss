@@ -1,0 +1,11 @@
+.top-row{
+    display: flex;
+    .main-title{
+        position: relative;
+        top: 8px;
+    }
+    .logout {     
+        right: 0px;
+        position: absolute;
+   }
+}

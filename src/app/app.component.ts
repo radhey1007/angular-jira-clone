@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { sidebarData } from './constant/sidenav.constant';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'jktech-test';
+  title = 'Issue Tracker';
+  sidemenu = sidebarData;
+
+  
+  
+
+
+
 }
