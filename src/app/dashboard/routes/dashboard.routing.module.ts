@@ -7,8 +7,8 @@ import { BacklogComponent } from '../backlog/backlog.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: DashboardComponent },
   { path: 'sprint', component: SprintComponent },
   { path: 'issue', component: IssueComponent },
   { path: 'backlog', component: BacklogComponent },

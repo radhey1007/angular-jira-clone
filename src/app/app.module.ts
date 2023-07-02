@@ -10,13 +10,17 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from 'src/AuthGurad/auth.guard';
 import { AuthService } from 'src/services/auth.services';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TopbarComponent,
-    LoginComponent
+    LoginComponent,
+    AboutComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
