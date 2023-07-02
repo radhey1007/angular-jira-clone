@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class DashboardComponent {
 
  constructor() {
-    alert('dashboard')
+    alert('dashboard');
  }
 
 }

@@ -37,7 +37,7 @@ export const sidebarData = [
     },
     {
         id:5,
-        path:'dashboard/logout',
+        path:'logout',
         label:'Logout',
         isActive:false,
         isChildNode:false,

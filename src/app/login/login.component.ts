@@ -1,29 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormControl, Validators,FormBuilder, FormGroup, } from '@angular/forms';
 import { AuthService } from 'src/services/auth.services';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   isLoggedIn = false;
-  username: string = '';
-  password: string = '';
+  usernameFormControl!: FormControl<string | null>;
+  passwordFormControl!: FormControl<string | null>;
+  loginForm!: FormGroup<{ username: FormControl<string | null>; password: FormControl<string | null>; }>;
 
-  constructor(private router: Router, private authService:AuthService) { }
+  constructor(private router: Router, private authService:AuthService,private formBuilder: FormBuilder) { }
 
-  login() {
-    this.authService.login(this.username,this.password).subscribe((res:any)=> {
-      if(res){
-        this.isLoggedIn = true;
-        localStorage.setItem('isLoggedIn', 'true');
-        this.router.navigate(['/dashboard']);
-       } else {
-       this.logout();
-       }
-    }) 
+  ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+
+    if(localStorage.getItem('isLoggedIn')==='true'){
+      this.router.navigate(['/dashboard']);
+    }
+
+  }
+
+  login(username:string,password:string) {   
+      this.authService.login(username,password).subscribe((res:any)=> {
+        if(res){
+          this.isLoggedIn = true;
+          localStorage.setItem('isLoggedIn', 'true');
+          this.router.navigate(['/dashboard']);
+         } else {
+         this.logout();
+         }
+      });    
+  }
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      const username :any = this.loginForm.controls.username.value;
+      const password :any = this.loginForm.controls.password.value;      
+      this.login(username, password);
+    } else {
+      console.log('Please fill all the field');
+    } 
   }
 
   logout(){

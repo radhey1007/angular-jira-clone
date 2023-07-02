@@ -5,19 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopbarComponent } from './topbar/topbar.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { MaterialModule } from './material.module';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from 'src/AuthGurad/auth.guard';
 import { AuthService } from 'src/services/auth.services';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TopbarComponent,
-    SidebarComponent,
     LoginComponent
   ],
   imports: [
@@ -25,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule
   ],
   providers: [AuthGuard, AuthService],

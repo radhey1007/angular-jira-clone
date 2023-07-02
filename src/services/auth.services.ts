@@ -13,14 +13,18 @@ export class AuthService {
   login(username: string, password: string): Observable<boolean> {
     const isValidUser = username === 'admin' && password === 'password';
     if (isValidUser) {
-      this.isLoggedInSubject.next(true);
+      this.publishLogin(true);
     }
-
     return this.isLoggedIn$;
   }
 
-  logout(): void {
-    
-    this.isLoggedInSubject.next(false);
+  logout(): void {    
+    localStorage.setItem('isLoggedIn','false');
+    this.publishLogin(false);
   }
+
+  publishLogin(isLoggedIn:boolean){
+    this.isLoggedInSubject.next(isLoggedIn);
+  }
+
 }

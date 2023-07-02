@@ -1,0 +1,12 @@
+.main-container {
+    padding:20px;
+    margin:10px;
+    // width:80%;
+    .field-row{
+        display: flex;
+        width:60%;
+        .mat-mdc-form-field{
+            width:60%;
+        }
+    }
+}
