@@ -12,6 +12,7 @@ import { AuthService } from 'src/services/auth.services';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MaterialModule
   ],

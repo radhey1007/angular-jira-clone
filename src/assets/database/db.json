@@ -1,0 +1,40 @@
+{
+    "users": [
+      { "id": 1, "name": "Radhey", "email": "radheysv78@gmail.com","password":"password" },
+      { "id": 2, "name": "admin", "email": "admin@gmail.com","password":"password" }
+    ],
+    "sprint":[       
+        {
+           "id":1,"title" : "May-Sprint","startDate":"01/05/2023","endtDate":"01/05/2023","isActive":false,"status":"Closed"
+        },
+        {
+            "id":2,"title" : "June-Sprint","startDate":"01/06/2023","endtDate":"31/06/2023","isActive":false,"status":"Closed"
+        },
+        {
+            "id":3,"title" : "July-Sprint","startDate":"01/07/2023","endtDate":"31/07/2023","isActive":true,"status":"In Progress"
+        },
+        {
+            "id":4,"title" : "August-Sprint","startDate":"01/08/2023","endtDate":"31/08/2023","isActive":true,"status":"Not Started"
+        },
+        {
+            "id":5,"title" : "September-Sprint","startDate":"01/09/2023","endtDate":"31/09/2023","isActive":true,"status":"Not Started"
+        }
+    ],
+    "issue":[
+     {
+        "id":1,"issuetitle":"Issue 1", "sprintName":"May-Sprint"
+     },
+     {
+        "id":2,"issuetitle":"Issue 2", "sprintName":"May-Sprint"
+     },
+     {
+        "id":3,"issuetitle":"Issue 3", "sprintName":"May-Sprint"
+     },
+     {
+        "id":4,"issuetitle":"Issue 4", "sprintName":"June-Sprint"
+     },
+     {
+        "id":5,"issuetitle":"Issue 5", "sprintName":"June-Sprint"
+     }
+    ]
+  }

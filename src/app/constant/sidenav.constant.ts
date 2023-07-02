@@ -2,7 +2,7 @@ export const sidebarData = [
     {
         id:1,
         path:'dashboard',
-        label:'Dashborad',
+        label:'All Sprint',
         isActive:true,
         isChildNode:false,
         iconClass:'',
