@@ -5,6 +5,7 @@ import { DashboardRoutingModule } from './routes/dashboard.routing.module';
 import { IssueComponent } from './issue/issue.component';
 import { SprintComponent } from './sprint/sprint.component';
 import { BacklogComponent } from './backlog/backlog.component';
+import { MaterialModule } from '../material.module';
 
 
 
@@ -17,7 +18,8 @@ import { BacklogComponent } from './backlog/backlog.component';
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
+    DashboardRoutingModule,
+    MaterialModule
   ]
 })
 export class DashboardModule { }

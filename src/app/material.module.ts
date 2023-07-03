@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 
 
 // Import other Angular Material modules as needed
@@ -16,13 +17,14 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
       MatSidenavModule,
     CommonModule,
+    MatTableModule,
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
     MatListModule,
-    MatInputModule 
+    MatInputModule
     // Include other Angular Material modules
   ],
   exports: [
@@ -33,7 +35,8 @@ import { MatInputModule } from '@angular/material/input';
     MatToolbarModule,
     MatCardModule,
     MatListModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule
     // Export other Angular Material modules
   ]
 })
