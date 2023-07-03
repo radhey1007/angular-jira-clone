@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddsprintComponent } from '../addsprint/addsprint.component';
+import { AddissueComponent } from '../addissue/addissue.component';
 
 
 @Component({
@@ -20,8 +21,13 @@ export class DropdownComponent {
 
   openDialog(event:any): void {
     console.log(event);
-    const dialogRef = this.dialog.open(AddsprintComponent, {
-      width: '400px',
+    let type = event.value;
+    let componentName:any = AddsprintComponent;
+    if(type==="addIssue"){
+      componentName = AddissueComponent
+    }
+    const dialogRef = this.dialog.open(componentName, {
+      width: '650px',
     });
   
     dialogRef.afterClosed().subscribe(result => {

@@ -6,6 +6,7 @@ import { MaterialModule } from '../material.module';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { AddsprintComponent } from './addsprint/addsprint.component';
 import { AddissueComponent } from './addissue/addissue.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { AddissueComponent } from './addissue/addissue.component';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports:[
     TableComponent,

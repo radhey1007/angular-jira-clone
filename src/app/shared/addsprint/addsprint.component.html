@@ -1,8 +1,63 @@
-<h2 mat-dialog-title>Add Product</h2>
+<div class="addsprint">
+<h2 mat-dialog-title>Add Sprint</h2>
 <mat-dialog-content>
-  <!-- Add your form inputs for adding a product here -->
+    <div class="main-container">
+        <form class="add-sprint-form" [formGroup]="addsprintForm" (ngSubmit)="onSubmit()">
+            <div class="field-row">
+               <mat-form-field appearance="fill">        
+                <mat-label>title</mat-label>
+                <input matInput formControlName="title" required>
+                <mat-error *ngIf="addsprintForm.controls['title'].invalid && (addsprintForm.controls?.['title']?.dirty || 
+                addsprintForm.controls?.['title']?.touched)">
+                  Please enter a valid title.
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="field-row">
+              <mat-form-field appearance="fill">
+                <mat-label>startDate</mat-label>
+                <input matInput type="text" formControlName="startDate" required>
+                <mat-error *ngIf="addsprintForm.controls['startDate']?.invalid && (addsprintForm.controls['startDate']?.dirty ||
+                addsprintForm.controls['startDate']?.touched)">
+                  Please enter a valid startDate.
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="field-row">
+                <mat-form-field appearance="fill">
+                  <mat-label>endDate</mat-label>
+                  <input matInput type="text" formControlName="endDate" required>
+                  <mat-error *ngIf="addsprintForm.controls['endDate']?.invalid && (addsprintForm.controls['endDate']?.dirty ||
+                  addsprintForm.controls['endDate']?.touched)">
+                    Please enter a valid endDate.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="field-row">
+                <mat-form-field appearance="fill">
+                  <mat-label>isActive</mat-label>
+                  <input matInput type="text" formControlName="isActive" required>
+                  <mat-error *ngIf="addsprintForm.controls['isActive']?.invalid && (addsprintForm.controls['isActive']?.dirty ||
+                  addsprintForm.controls['isActive']?.touched)">
+                    Please enter a valid isActive.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="field-row">
+                <mat-form-field appearance="fill">
+                  <mat-label>status</mat-label>
+                  <input matInput type="text" formControlName="status" required>
+                  <mat-error *ngIf="addsprintForm.controls['status']?.invalid && (addsprintForm.controls['status']?.dirty ||
+                  addsprintForm.controls['status']?.touched)">
+                    Please enter a valid status.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            <button mat-raised-button color="primary" type="submit">Save</button>
+          </form>
+      </div>
 </mat-dialog-content>
 <mat-dialog-actions>
   <button mat-button (click)="cancel()">Cancel</button>
-  <button mat-button color="primary" (click)="save()">Save</button>
 </mat-dialog-actions>
+</div>
