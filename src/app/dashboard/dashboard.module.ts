@@ -6,6 +6,7 @@ import { IssueComponent } from './issue/issue.component';
 import { SprintComponent } from './sprint/sprint.component';
 import { BacklogComponent } from './backlog/backlog.component';
 import { MaterialModule } from '../material.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -19,7 +20,8 @@ import { MaterialModule } from '../material.module';
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ]
 })
 export class DashboardModule { }

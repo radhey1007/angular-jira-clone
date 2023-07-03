@@ -3,8 +3,6 @@ import { DashboardService } from './services/dashboard.service';
 import {MatTableDataSource} from '@angular/material/table';
 import { SprintInterface } from './Interfaces/sprint.interface';
 
-
-
 const ELEMENT_DATA: SprintInterface[] = [];
 
 @Component({

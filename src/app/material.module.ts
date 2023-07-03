@@ -9,6 +9,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 // Import other Angular Material modules as needed
@@ -24,8 +26,9 @@ import { MatTableModule } from '@angular/material/table';
     MatToolbarModule,
     MatCardModule,
     MatListModule,
-    MatInputModule
-    // Include other Angular Material modules
+    MatInputModule,
+    MatSelectModule,
+    MatDialogModule
   ],
   exports: [
     MatSidenavModule,
@@ -36,7 +39,9 @@ import { MatTableModule } from '@angular/material/table';
     MatCardModule,
     MatListModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule,
+    MatDialogModule
     // Export other Angular Material modules
   ]
 })
