@@ -14,9 +14,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
-
-
-// Import other Angular Material modules as needed
+import { MatExpansionModule } from '@angular/material/expansion';
+import {MatGridListModule} from '@angular/material/grid-list';
+ 
 
 @NgModule({
   imports: [
@@ -34,7 +34,9 @@ import { MatRadioModule } from '@angular/material/radio';
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+    MatExpansionModule,
+    MatGridListModule
   ],
   exports: [
     MatSidenavModule,
@@ -50,8 +52,9 @@ import { MatRadioModule } from '@angular/material/radio';
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
-    // Export other Angular Material modules
+    MatRadioModule,
+    MatExpansionModule,
+    MatGridListModule
   ]
 })
 export class MaterialModule { }

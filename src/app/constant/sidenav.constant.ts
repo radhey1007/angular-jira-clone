@@ -8,15 +8,15 @@ export const sidebarData = [
         iconClass:'',
         isDefaultVisible:false
     },
-    {
-        id:2,
-        path:'dashboard/sprint',
-        label:'Sprint',
-        isActive:false,
-        isChildNode:false,
-        iconClass:'',
-        isDefaultVisible:false
-    },
+    // {
+    //     id:2,
+    //     path:'dashboard/sprint',
+    //     label:'Sprint',
+    //     isActive:false,
+    //     isChildNode:false,
+    //     iconClass:'',
+    //     isDefaultVisible:false
+    // },
     {
         id:3,
         path:'dashboard/issue',

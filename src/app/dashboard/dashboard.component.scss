@@ -7,3 +7,24 @@ table {
     font-size: 14px;
     width: 60%;
   }
+
+  mat-grid-tile {
+    background: #e9eff1;
+  }
+.row-sprint{
+  position: relative;
+  padding-top:25px;
+
+  display:flex;
+  width:100%;
+  .sprint-box{
+    width:50%;
+  }
+}
+
+.mat-accordion{
+  width: 100%;
+    padding: 10px;
+    position: relative;
+    bottom: 240px;
+}
