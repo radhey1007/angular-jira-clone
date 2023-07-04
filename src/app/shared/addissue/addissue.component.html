@@ -1,1 +1,36 @@
-<p>addissue works!</p>
+<div class="addIssue">
+    <h2 mat-dialog-title>Add Issue Details</h2>
+    <mat-dialog-content>
+        <div class="main-container">
+            <form class="add-sprint-form" [formGroup]="addIssueForm" (ngSubmit)="onSubmit()">
+                <div class="field-row">
+                   <mat-form-field appearance="fill">        
+                    <mat-label>Issue Title</mat-label>
+                    <input matInput formControlName="issuetitle" required>
+                    <mat-error *ngIf="addIssueForm.controls['issuetitle'].invalid && (addIssueForm.controls?.['issuetitle']?.dirty || 
+                    addIssueForm.controls?.['issuetitle']?.touched)">
+                      Please enter a valid issuetitle.
+                    </mat-error>
+                  </mat-form-field>
+                </div>  
+                <mat-form-field appearance="fill">
+                    <mat-label>Select Sprint</mat-label>
+                    <mat-select (selectionChange)="selectChange($event)">
+                      <mat-option *ngFor="let option of options" [value]="option">{{ option.title }}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                <div class="field-row">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Status</mat-label>
+                      <input matInput type="text" formControlName="status" [readonly]="isInputReadonly">
+                    </mat-form-field>
+                  </div>
+                <button mat-raised-button color="primary" type="submit">Save</button>
+              </form>
+          </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button mat-button (click)="cancel()">Cancel</button>
+    </mat-dialog-actions>
+    </div>

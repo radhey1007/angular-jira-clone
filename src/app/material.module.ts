@@ -11,6 +11,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 // Import other Angular Material modules as needed
@@ -28,7 +31,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatListModule,
     MatInputModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule
   ],
   exports: [
     MatSidenavModule,
@@ -41,7 +47,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatInputModule,
     MatTableModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatRadioModule
     // Export other Angular Material modules
   ]
 })
