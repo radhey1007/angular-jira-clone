@@ -60,8 +60,8 @@ export class AddissueComponent {
         if(res){
           this.cancel();
           console.log(res);
-          alert("Issue Added Successfully");
           this.router.navigate(['/dashboard/issue']);
+          alert("Issue Added Successfully");
         }
       },err=> {
         console.log(err);
